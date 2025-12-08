@@ -1,4 +1,5 @@
 console.log('wow someone is usong a super awesome calculator\ni made'); // l random stuff
+window.alert('Warning! Do not disable prompts and alerts or calculator wont work!');
 let doMoreMath=true; // tried to put this in a while loop but then it didnt it kept it kept doing it and broke the computer so i got rid of it but im lazy and kept this varialbe
 let number1 = window.prompt('Enter the first number.'); // get first num
 let operator = window.prompt('Enter the operator.'); // get operator like +-*/
@@ -67,3 +68,4 @@ else {
     }
     
 }
+
