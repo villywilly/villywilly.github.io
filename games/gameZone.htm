@@ -7,6 +7,14 @@
     </head>
     <body>
         <link rel="stylesheet" href="gameZone.css">
+        <div id="banner" class="banner">
+          <div class="banner-content">
+            <h3>Game Zone and minecraft clients are leaving VillyWilly.github.io!</h3>
+            <p>If you still want to access these soon, go to gn-bio.github.io, or click the green button</p>
+            <button id="closeBtn" class="close-btn">&times;</button>
+            <button id="actionBtn" class="action-btn">gn-bio</button>
+          </div>
+        </div>   
         <div class="Title">
             <h1 class="outline">
                 Howdy! Welcome to Villy's gameZone!
@@ -19,7 +27,7 @@
                     99 nights in a forest
                 </a>
             <h3>
-                <a href="theGameFiles/UNDERTALE.html" class="btn">Undertale (doesnt really work because orion gave me a fake version</a>
+                <a href="theGameFiles/UNDERTALE.html" class="btn">Undertale (doesnt really work because orion gave me a fake version)</a>
             </h3>
             <h3>
                 <a href="theGameFiles/Deltarune.html" class="btn">Deltarune (dont work) </a>
@@ -39,4 +47,32 @@
             </div>
         </footer>
     </body>
+            <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const banner = document.getElementById('banner');
+            const closeBtn = document.getElementById('closeBtn');
+            const actionBtn = document.getElementById('actionBtn');
+
+             // Close banner on X click
+             closeBtn.addEventListener('click', () => {
+            banner.style.opacity = '0';
+            banner.style.height = '0';
+            banner.style.padding = '0';
+            setTimeout(() => {
+              banner.remove();
+            }, 300); // Match CSS transition duration
+          });
+
+          // Close banner on action button click
+          actionBtn.addEventListener('click', () => {
+            banner.style.opacity = '0';
+                banner.style.height = '0';
+            banner.style.padding = '0';
+            window.location.href = "https://gn-bio.github.io";
+            setTimeout(() => {
+                  banner.remove();
+                }, 300);
+              });
+            });   
+        </script>
 </html>

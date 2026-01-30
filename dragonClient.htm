@@ -2,6 +2,14 @@
 <HTML>
 	<head><title>VillyWilly - minecraft Clients</title></head>
 	<body>
+		        <div id="banner" class="banner">
+          <div class="banner-content">
+            <h3>Game Zone and minecraft clients are leaving VillyWilly.github.io!</h3>
+            <p>If you still want to access these, go to gn-bio.github.io, or click the green button</p>
+            <button id="closeBtn" class="close-btn">&times;</button>
+            <button id="actionBtn" class="action-btn">gn-bio</button>
+          </div>
+        </div>   
 		<h1>
 			Hack Clients for MC
 		</h1>
@@ -18,7 +26,34 @@
             Thank you for visiting VillyWilly's website! btw my minecraft username is Villy_willy
         </p>
         <hr>
-		</DIV>
+		            <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const banner = document.getElementById('banner');
+            const closeBtn = document.getElementById('closeBtn');
+            const actionBtn = document.getElementById('actionBtn');
+
+             // Close banner on X click
+             closeBtn.addEventListener('click', () => {
+            banner.style.opacity = '0';
+            banner.style.height = '0';
+            banner.style.padding = '0';
+            setTimeout(() => {
+              banner.remove();
+            }, 300); // Match CSS transition duration
+          });
+
+          // Close banner on action button click
+          actionBtn.addEventListener('click', () => {
+            banner.style.opacity = '0';
+                banner.style.height = '0';
+            banner.style.padding = '0';
+            window.location.href = "https://gn-bio.github.io";
+            setTimeout(() => {
+                  banner.remove();
+                }, 300);
+              });
+            });   
+        </script>
     </footer>
 	</body>
 </HTML>
