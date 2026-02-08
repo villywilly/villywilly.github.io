@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please login:</h1>
+    <!--hey stop reading this!
+    you can steal the passwords n stuff bc i cant use php
+    bc its github, but i couldnt care less so go ahead
+    its just an experiment of my friend and i for a secret
+    thing so just dw abt ts ok?-->
+    <form>
+        <h2>username</h2>
+        <input type="text" id="leo">
+        <h2>password</h2>
+        <input type="password" id="dante"><br><br>
+        <button onclick="login()" type="button">Sumbit</button>
+    </form>
+    <h2 id="lucian"></h2>
+</body>
+    <script>
+        function login() {
+            let password = document.getElementById("dante").value;
+            let username = document.getElementById('leo').value;
+            console.log(username,password,'son tu lofin info');
+            const leopass = 96874;
+            const willpass = 8772;
+            if ((username = "leo") && (password == leopass)) {
+                window.location.href='main.html'
+                console.log(1)
+            }
+            else if ((username == "will") && (password == willpass)) {
+                window.location.href='main.html'
+                console.log(2)
+            }
+            else if((username === "") || (password === "")) {
+                document.getElementById('lucian').textContent = "Bru u forgot to put in the username or password"
+                console.log(3)
+            }
+            else {
+                document.getElementById('lucian').textContent = "Invalid username or password try again nerd."
+                console.log(4)
+            }
+            console.log('end')
+        }
+    </script>
+</html>
