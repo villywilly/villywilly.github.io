@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve users</title>
+</head>
+<body>
+    <h1>Welcome! Some users may need approval to sign on to the network,<br>You can approve the sign ons here.</h1>
+
+    <h2 id="the counter">Looking for users...</h2>
+    <button onclick="(() => {
+        window.location.href='/hacker-man-simulator/main.html';
+        console.log('return')})()">Return</button>
+        <script>
+                    function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function main() {
+            let message = "Looking for users"
+            for (let i = 0; i < 5; i++) {
+                switch (i) {
+                    case 0 :
+                        message = "Looking for users.";
+                        break;
+                    case 1 :
+                        message = "Looking for users..";
+                        break;
+                    case 2 :
+                        message = "Looking for users...";
+                        break;
+                    case 3:
+                        message = "Looking for users...."; break;
+                    case 4 :
+                        message = "Looking for users....."; break;
+                    default:
+                        message = "Looking for users";
+                }
+                document.getElementById("the counter").textContent = message;
+                await sleep(1000);
+            }
+        main();
+        }
+        main();
+        </script>
+</body>
+</html>

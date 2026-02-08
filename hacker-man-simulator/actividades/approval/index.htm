@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awaiting Approval</title>
+</head>
+<body>
+    <h1>Awaiting approval</h1>
+    <h2>Sign on must be approved by a Hacker or a high ranking manager.</h2>
+    <h3>Time elapsed:</h3>
+    <h3 id="token"> </h3>
+    <button onclick="(() => {
+        window.location.href='/hacker-man-simulator/';
+        console.log('return')})()">Return</button>
+        <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+            function rand(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        async function main() {
+            let counter = 0;
+            let number;
+            while (true) {
+                number = rand(1,15);
+                //console.log(number)
+                await sleep(1000);
+                if (number === 1){
+                    document.write('You have been approved! Redirecting...');
+                    await sleep(1000);
+                    window.location.href = '/hacker-man-simulator/main.html'
+                }
+                else {
+                    counter = counter + 1;
+                    document.getElementById("token").textContent = counter;
+                }
+            }
+        }
+        main();
+        </script>
+</body>
+</html>

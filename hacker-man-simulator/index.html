@@ -18,23 +18,29 @@
         <h2>password</h2>
         <input type="password" id="dante"><br><br>
         <button onclick="login()" type="button">Sumbit</button>
+            <button onclick="go_back()">go back</button>
     </form>
     <h2 id="lucian"></h2>
 </body>
     <script>
+        function go_back() {window.location.href='../index.html';console.log('go bacl'); window.alert('so 4 some reason this line HAS to exist to make it reidrect you for some reason idk whuy and idc as loing as it works')}
         function login() {
             let password = document.getElementById("dante").value;
             let username = document.getElementById('leo').value;
             console.log(username,password,'son tu lofin info');
             const leopass = 96874;
-            const willpass = 8772;
+            const pizzaworkerpass = 8772;
             if ((username = "leo") && (password == leopass)) {
                 window.location.href='main.html'
                 console.log(1)
             }
-            else if ((username == "will") && (password == willpass)) {
+            else if ((username == "will") && (password == leopass)) {
                 window.location.href='main.html'
                 console.log(2)
+            }
+            else if(password == pizzaworkerpass) {
+                window.location.href="actividades/approval/index.htm";
+                console.log(5);
             }
             else if((username === "") || (password === "")) {
                 document.getElementById('lucian').textContent = "Bru u forgot to put in the username or password"
