@@ -21,6 +21,17 @@
         ,"[Susan] Do you have any updates on the hackers?"
         ,"[Baggins] Yes, plenty of updates.<br>[Baggins] The hackers have a new automated gun. And they have newer techonology on their keyboards, giving them more influence in the radio space."
         ]
+        const british_responses = [
+            "[James] Henry, I have to speak to you about the rapid expansion of the Hackers."
+            ,"[Henry] Yes, it is very worrying, they have been getting closer and closer to our colonies. "
+            ,"[James] They have great technology, we must stay hidden."
+            ,"[Henry] Staying hidden will only delay the inevitable."
+            ,"[James] You have a point, but to beat them we must strike fast and hard."
+            ,"[Henry] If we stop their keyboard production we might have a chance."
+            ,"[James] Dont forget about the karens."
+            ,"[Henry] Right, if we ally with them, we may be able to beat them after all."
+            ,"[James] Okay, I will be sure to let the king know."
+        ]
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
@@ -30,10 +41,11 @@
         function rchoice(array) {
             return randomElement = array[Math.floor(Math.random() * array.length)];
         }
+        const rsponses = british_responses;//Change which set is used.
         async function main() { while (true) {
             await sleep(1000);
             if (rand(1,2) == 1) {
-                response = rchoice(responses);
+                response = rchoice(rsponses);
                 if (attempt === false) {
                     attempt = true;
                     document.write('Success! Use the back button to return to main page. <br><hr>');
