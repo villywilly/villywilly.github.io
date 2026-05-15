@@ -41,7 +41,11 @@
         function rchoice(array) {
             return randomElement = array[Math.floor(Math.random() * array.length)];
         }
-        const rsponses = british_responses;//Change which set is used.
+        const uchoice = window.prompt("type 1 or 2 to select a conversation."); //allow user to choose a set of messages
+        let rp;
+        if (uchoice == "1") {rp = "responses";} // for response set 1
+        else if (uchoice == "2") {rp = "british_responses";} // same as above
+        const rsponses = rp;//Change which set is used.
         async function main() { while (true) {
             await sleep(1000);
             if (rand(1,2) == 1) {
